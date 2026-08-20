@@ -1,8 +1,66 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Kondisi Publikasi - FloFeed</title><link rel="stylesheet" href="assets/css/style.css"></head>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kondisi Publikasi - FloFeed</title>
+</head>
 <body>
-	<header class="topbar"><a class="brand" href="home.html" aria-label="FloFeed home"><span class="brand-icon" aria-hidden="true"></span><span class="brand-name">FloFeed</span></a><details class="account"><summary class="account-trigger"><span class="avatar">RP</span><span class="account-name">Rizky Pratama</span><span class="chevron" aria-hidden="true">&#9662;</span></summary><div class="account-panel"><div class="account-info"><p class="name">Rizky Pratama</p><p class="email">rizky@email.com</p></div><div class="account-divider"></div><a class="logout-btn" href="index.html">Logout</a></div></details></header>
-	<main class="room-page"><section class="room-heading"><a class="room-back" href="home.html" aria-label="Kembali">&larr;</a><div class="room-title"><h1>Evaluasi Matematika</h1><p>Room Peserta &middot; Kode: EVL-2847</p></div><span class="room-state">Menunggu Syarat</span></section><nav class="room-tabs" aria-label="Navigasi room"><a class="room-tab" href="jawab-soal.html">&#9633; Feedback Anonim</a><a class="room-tab active" href="kondisi-publikasi.html">&#9711; Menunggu Syarat</a></nav><section class="card room-content room-empty"><h2>Menunggu Syarat</h2><p>Room belum dipublikasikan oleh pemiliknya.</p></section></main>
+
+<div class="top-accent"></div>
+
+<header>
+  <div class="logo">
+    <div class="logo-icon">🤖</div>
+    <div class="logo-text">FloFeed</div>
+  </div>
+  <div class="user-menu">
+    <div class="avatar">UN</div>
+    <div class="user-name">Upik Nambo</div>
+    <span class="chevron">▾</span>
+  </div>
+</header>
+
+<main>
+  <div class="page-title-row">
+    <button class="back-btn" onclick="history.back()">←</button>
+    <div class="page-title">
+      <h1>Kondisi Publikasi</h1>
+      <p>Kapan feedback akan ditampilkan ke Room Master</p>
+    </div>
+  </div>
+
+  <div class="options-card">
+    <div class="option selected" data-value="30menit">
+      <div class="radio-dot"></div>
+      <div class="option-icon purple">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+      </div>
+      <h2>30 Menit</h2>
+      <p>Feedback akan masuk ke Room Master 30 menit setelah room dibuat</p>
+    </div>
+
+    <div class="option" data-value="5peserta">
+      <div class="radio-dot"></div>
+      <div class="option-icon blue">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+      </div>
+      <h2>5 Peserta</h2>
+      <p>Feedback masuk setelah 5 peserta mengisi formulir</p>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <div class="info-icon">i</div>
+    <p><strong>Tentang Privasi:</strong> Isi feedback terlihat setelah syarat terpenuhi, namun identitas pengirim tidak akan pernah terlihat.</p>
+  </div>
+
+  <div class="btn-row">
+    <button class="btn btn-secondary" onclick="history.back()">Kembali</button>
+    <button class="btn btn-primary" id="confirmBtn">Konfirmasi</button>
+  </div>
+</main>
+
+
 </body>
 </html>
