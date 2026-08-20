@@ -35,7 +35,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 40px;
+    min-height: 68px;
+    padding: 12px 32px;
     background: #ffffff;
     border-bottom: 1px solid #EDEDF2;
   }
@@ -199,6 +200,17 @@
     font-size: 18px;
     color: var(--ink);
   }
+
+  .back-btn a {
+  text-decoration: none; 
+  color: var(--ink);    
+  font-size: 18px;       
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
  
   .back-btn:hover {
     background: #f3f3f8;
@@ -336,14 +348,16 @@
     gap: 8px;
   }
  
-  .btn-secondary {
+  .btn-secondary  {
     background: #ffffff;
     border: 1px solid #E4E4EC;
     color: var(--ink);
+    text-decoration: none;
   }
  
   .btn-secondary:hover {
     background: #F7F7FA;
+
   }
  
   .btn-primary {
@@ -379,20 +393,20 @@
     <header class="topbar">
 
         <div class="brand">
-            <div class="brand-icon"> </div>
+            <div class="brand-icon" aria-hidden="true"> </div>
             <span class="brand-name">FloFeed</span>
         </div>
 
         <details class="account">
             <summary class="account-trigger">
-                <span class="avatar">UN</span>
-                <span class="account-name">Upik Nambo</span>
+                <span class="avatar">RP</span>
+                <span class="account-name">Rizky Pratama</span>
                 <span class="chevron">&#9662;</span>
             </summary>
             <div class="account-panel">
                 <div class="account-info">
-                    <p class="name">Upik Nambo</p>
-                    <p class="email">UpNam@email.com</p>
+                    <p class="name">Rizky Pratama</p>
+                    <p class="email">rizky@email.com</p>
                 </div>
                 <div class="account-divider"></div>
                 <button class="logout-btn">
@@ -406,7 +420,9 @@
 
     <main class ="page">
         <div class="page-header">
-            <button class="back-btn" aria-label="Kembali">&larr;</button> 
+            <button class="back-btn" aria-label="Kembali">
+                <a href="home.html" class="back-btn" aria-label="Kembali">&larr;</a>
+            </button>
             <div class="page-title-group">
                 <h1>Buat Room Baru</h1>
                 <p>Rancang pertanyaan untuk peserta Anda</p>
@@ -441,7 +457,7 @@
         </button>
 
         <div class="actions">
-            <button  class="btn btn-secondary">Batal</button>
+           <a href="home.html" class="btn btn-secondary text-decoration-none">Batal</a>
             <button  class="btn btn-primary">Simpan<span class="arrow">&rarr;</span></button>
         </div>
     </main>

@@ -32,7 +32,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 16px 40px;
+        min-height: 68px;
+        padding: 12px 32px;
         background: #fff;
         border-bottom: 1px solid #ededf2;
       }
@@ -46,6 +47,14 @@
         height: 34px;
         border-radius: 50%;
         background: linear-gradient(135deg, var(--purple), var(--blue));
+      }
+      .brand-icon::after {
+        content: "";
+        display: block;
+        width: 13px;
+        height: 9px;
+        border-radius: 3px;
+        background: #fff;
       }
       .brand-name {
         font-size: 20px;
