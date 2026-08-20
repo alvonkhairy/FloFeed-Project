@@ -374,6 +374,174 @@ input {
 	text-decoration: none;
 }
 
+.page {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 40px 24px 64px;
+}
+
+.page .card {
+	padding: 24px;
+	margin-bottom: 20px;
+}
+
+.login-page {
+	max-width: 420px;
+	margin: 72px auto;
+	padding: 24px;
+}
+
+.login-page .card {
+	padding: 28px;
+}
+
+.create-page {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 40px 24px 64px;
+}
+
+.page-header {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	margin-bottom: 28px;
+}
+
+.back-btn {
+	width: 40px;
+	height: 40px;
+	border: 0;
+	border-radius: 50%;
+	background: #fff;
+	box-shadow: 0 1px 2px rgba(20, 20, 31, 0.06);
+	color: var(--ink);
+	cursor: pointer;
+	font-size: 18px;
+}
+
+.page-title-group h1 {
+	margin: 0;
+	font-size: 24px;
+	font-weight: 800;
+}
+
+.page-title-group p {
+	margin: 4px 0 0;
+	color: var(--sub-ink);
+	font-size: 14px;
+}
+
+.field-label {
+	display: block;
+	margin-bottom: 10px;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+.page .text-input {
+	display: block;
+	padding: 13px 16px;
+	font-size: 14.5px;
+}
+
+.text-input + .text-input {
+	margin-top: 12px;
+}
+
+.question-head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 14px;
+}
+
+.pill {
+	display: inline-flex;
+	align-items: center;
+	padding: 6px 14px;
+	border-radius: 999px;
+	font-size: 13px;
+	font-weight: 600;
+}
+
+.pill-purple {
+	background: var(--purple-light);
+	color: var(--purple-text);
+}
+
+.pill-grey {
+	background: var(--grey-bg);
+	color: var(--grey-text);
+}
+
+.add-question-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	width: 100%;
+	margin-bottom: 28px;
+	padding: 16px;
+	border: 1.5px dashed #d6d6e2;
+	border-radius: 14px;
+	background: transparent;
+	color: var(--grey-text);
+	cursor: pointer;
+	font-size: 14.5px;
+	font-weight: 600;
+}
+
+.page .actions {
+	display: flex;
+	gap: 16px;
+	margin-top: 0;
+}
+
+.page .actions .btn {
+	flex: 1;
+	padding: 15px;
+	font-size: 15px;
+}
+
+.btn-secondary {
+	background: #fff;
+	border: 1px solid #e4e4ec;
+	color: var(--ink);
+	text-decoration: none;
+}
+
+.form-title {
+	margin: 0 0 6px;
+	font-size: 20px;
+	font-weight: 800;
+}
+
+.form-sub {
+	margin: 0 0 20px;
+	color: var(--sub-ink);
+}
+
+.input-row {
+	margin-bottom: 14px;
+}
+
+.meta {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 12px;
+	color: var(--sub-ink);
+	font-size: 13px;
+}
+
+.footer-note {
+	margin-top: 14px;
+	color: var(--sub-ink);
+	font-size: 13px;
+	text-align: center;
+}
+
 @media (max-width: 640px) {
 	.topbar {
 		padding: 12px 18px;
@@ -398,5 +566,13 @@ input {
 
 	.join-form .btn-primary {
 		width: 100%;
+	}
+
+	.page {
+		padding: 28px 16px 48px;
+	}
+
+	.page .actions {
+		flex-direction: column;
 	}
 }
