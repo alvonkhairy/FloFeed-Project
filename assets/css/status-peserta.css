@@ -1,0 +1,424 @@
+:root {
+  --ink: #12182c;
+  --muted: #68718a;
+  --line: #e5e8f1;
+  --purple: #693eea;
+  --blue: #3176ed;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  background: #f8f8ff;
+  color: var(--ink);
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 58px;
+  padding: 0 20px;
+  border-bottom: 1px solid #edf0f7;
+  background: #fff;
+}
+
+.brand,
+.account-trigger {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.brand {
+  gap: 10px;
+}
+
+.brand-name {
+  color: #5d48e5;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.account {
+  position: relative;
+}
+
+.account-trigger {
+  gap: 10px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.account-trigger::-webkit-details-marker {
+  display: none;
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #5e45e9;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.account-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.chevron {
+  display: grid;
+  place-items: center;
+  width: 14px;
+  color: #667085;
+}
+
+.chevron svg,
+.state-icon svg,
+.tab-icon svg,
+.status-badge svg,
+.note-icon svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.chevron svg {
+  width: 10px;
+  stroke-width: 1.8;
+}
+
+.account-panel {
+  position: absolute;
+  z-index: 2;
+  top: 40px;
+  right: 0;
+  width: 200px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 12px 30px #26305a18;
+}
+
+.account-info p {
+  margin: 0;
+}
+
+.account-info .name {
+  font-weight: 700;
+}
+
+.account-info .email {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.account-divider {
+  margin: 12px 0;
+  border-top: 1px solid var(--line);
+}
+
+.logout-btn {
+  color: #e05263;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.room-page {
+  width: min(calc(100% - 48px), 932px);
+  margin: 34px auto 42px;
+}
+
+.room-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.room-back {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 50%;
+  background: #fff;
+  color: #42506a;
+  font-size: 24px;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: 0 4px 12px #26305a18;
+}
+
+.room-title {
+  flex: 1;
+}
+
+.room-title h1 {
+  margin: 0;
+  font-size: 23px;
+}
+
+.room-title p {
+  margin: 4px 0 0;
+  color: #9aa4bb;
+  font-size: 14px;
+}
+
+.room-state {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 16px;
+  border: 1px solid #f5cf62;
+  border-radius: 20px;
+  background: #fffdf4;
+  color: #c9780b;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.state-icon {
+  display: grid;
+  place-items: center;
+}
+
+.state-icon svg {
+  width: 15px;
+  stroke-width: 1.8;
+}
+
+.room-tabs {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 4px;
+  margin-bottom: 20px;
+  padding: 5px;
+  border: 1px solid #eef0f5;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 5px 15px #2e35620c;
+}
+
+.room-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 0 17px;
+  border-radius: 10px;
+  color: #65708a;
+  font-size: 13px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.tab-icon {
+  display: grid;
+  place-items: center;
+  color: #71809b;
+}
+
+.tab-icon svg {
+  width: 17px;
+  height: 17px;
+  stroke-width: 1.8;
+}
+
+.room-tab.active {
+  background: linear-gradient(100deg, #693eea, #2879ee);
+  color: #fff;
+  box-shadow: 0 6px 14px #5941e52b;
+}
+
+.room-tab.active .tab-icon {
+  color: #fff;
+}
+
+.participant-card {
+  overflow: hidden;
+  border: 1px solid #eef0f5;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 5px 15px #2e35620c;
+}
+
+.participant-head,
+.participant-row {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr 0.55fr;
+  align-items: center;
+}
+
+.participant-head {
+  min-height: 54px;
+  padding: 0 24px;
+  background: #fbfcfe;
+  color: #9aa4bb;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.participant-head span:nth-child(2),
+.participant-row > .status-badge {
+  justify-self: center;
+}
+
+.participant-head span:last-child,
+.participant-row time {
+  justify-self: end;
+}
+
+.participant-row {
+  min-height: 63px;
+  padding: 0 24px;
+  border-top: 1px solid #f0f2f7;
+  font-size: 14px;
+}
+
+.participant-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+}
+
+.participant-avatar {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #f1f3f7;
+  color: #70809a;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 11px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-badge svg {
+  width: 14px;
+  height: 14px;
+  stroke-width: 2;
+}
+
+.status-badge.complete {
+  background: #edfff5;
+  color: #18ab70;
+}
+
+.status-badge.pending {
+  background: #f1f3f7;
+  color: #9aa8bc;
+}
+
+.participant-row time {
+  color: #9aa8bb;
+  font-size: 13px;
+}
+
+.privacy-note {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  padding: 15px 18px;
+  border-radius: 12px;
+  background: #eef6ff;
+  color: #2870e9;
+  font-size: 13px;
+}
+
+.note-icon {
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+}
+
+.note-icon svg {
+  width: 16px;
+  height: 16px;
+  stroke-width: 1.8;
+}
+
+@media (max-width: 700px) {
+  .topbar {
+    padding: 0 16px;
+  }
+
+  .account-name {
+    display: none;
+  }
+
+  .room-page {
+    width: min(calc(100% - 28px), 620px);
+    margin-top: 22px;
+  }
+
+  .room-heading {
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+  }
+
+  .room-state {
+    margin-left: 50px;
+  }
+
+  .room-tabs {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .room-tab {
+    padding: 0 13px;
+  }
+
+  .participant-card {
+    overflow-x: auto;
+  }
+
+  .participant-head,
+  .participant-row {
+    min-width: 590px;
+  }
+
+  .privacy-note {
+    align-items: flex-start;
+    line-height: 1.5;
+  }
+}
