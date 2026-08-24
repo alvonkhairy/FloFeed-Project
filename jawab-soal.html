@@ -1,8 +1,65 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Jawab Soal - FloFeed</title><link rel="stylesheet" href="assets/css/style.css"></head>
+<head>
+<meta charset="UTF-8">
+<title>FloFeed - Evaluasi Pembelajaran</title>
+<link rel="stylesheet" href="style.css">
+</head>
 <body>
-	<header class="topbar"><a class="brand" href="home.html" aria-label="FloFeed home"><span class="brand-icon" aria-hidden="true"></span><span class="brand-name">FloFeed</span></a><details class="account"><summary class="account-trigger"><span class="avatar">RP</span><span class="account-name">Rizky Pratama</span><span class="chevron" aria-hidden="true">&#9662;</span></summary><div class="account-panel"><div class="account-info"><p class="name">Rizky Pratama</p><p class="email">rizky@email.com</p></div><div class="account-divider"></div><a class="logout-btn" href="index.html">Logout</a></div></details></header>
-	<main class="room-page"><section class="room-heading"><a class="room-back" href="home.html" aria-label="Kembali">&larr;</a><div class="room-title"><h1>Evaluasi Matematika</h1><p>Room Peserta &middot; Kode: EVL-2847</p></div><span class="room-state">Menunggu Syarat</span></section><nav class="room-tabs" aria-label="Navigasi room"><a class="room-tab active" href="jawab-soal.html">&#9633; Feedback Anonim</a><a class="room-tab" href="kondisi-publikasi.html">&#9711; Menunggu Syarat</a></nav><section class="card room-content room-empty"><h2>Feedback Anonim</h2><p>Soal akan tampil setelah room dibuka.</p></section></main>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-left">
+      <div class="logo-icon">&#9673;</div>
+      <span class="logo-text">FloFeed</span>
+    </div>
+    <div class="header-right">
+      <div class="avatar">RP</div>
+      <span class="user-name">Rizky Pratama</span>
+      <span class="dropdown-arrow">&#9662;</span>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div class="container">
+
+    <!-- Title card -->
+    <div class="card title-card">
+      <div>
+        <div class="title-main">Evaluasi Pembelajaran</div>
+        <div class="title-sub">Dibuat oleh Budi Santoso &middot; 23 peserta</div>
+      </div>
+      <div class="badge-anonim">&#128274; Feedback anonim</div>
+    </div>
+
+    <!-- Question 1 -->
+    <div class="card">
+      <div class="question-header">
+        <div class="question-number">1</div>
+        <div class="question-text">Bagaimana menurutmu materi hari ini?</div>
+      </div>
+      <textarea class="answer-box" placeholder="Tulis jawabanmu di sini..."></textarea>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="card">
+      <div class="question-header">
+        <div class="question-number">2</div>
+        <div class="question-text">Apa saran untuk perbaikan?</div>
+      </div>
+      <textarea class="answer-box" placeholder="Tulis jawabanmu di sini..."></textarea>
+    </div>
+
+    <!-- Notice -->
+    <div class="notice">&#128274; Identitas Anda tidak akan diketahui oleh siapapun</div>
+
+    <!-- Buttons -->
+    <div class="button-row">
+      <button class="btn btn-cancel">Batal</button>
+      <button class="btn btn-submit">&#9992; Kirim Feedback</button>
+    </div>
+
+  </div>
+
 </body>
 </html>
