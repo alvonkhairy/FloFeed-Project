@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FloFeed-buat soal</title>
+   
+</head>
+<body>
+    <header class="topbar">
+
+        <div class="brand">
+            <div class="brand-icon"> </div>
+            <span class="brand-name">FloFeed</span>
+        </div>
+
+        <details class="account">
+            <summary class="account-trigger">
+                <span class="avatar">UN</span>
+                <span class="account-name">Upik Nambo</span>
+                <span class="chevron">&#9662;</span>
+            </summary>
+            <div class="account-panel">
+                <div class="account-info">
+                    <p class="name">Upik Nambo</p>
+                    <p class="email">UpNam@email.com</p>
+                </div>
+                <div class="account-divider"></div>
+                <button class="logout-btn">
+                    <span class="logout-icon">&#8618;</span>
+                    Logout
+                </button>
+            </div>
+        </details>
+
+    </header>
+
+    <main class ="page">
+        <div class="page-header">
+            <button class="back-btn" aria-label="Kembali">&larr;</button> 
+            <div class="page-title-group">
+                <h1>Buat Room Baru</h1>
+                <p>Rancang pertanyaan untuk peserta Anda</p>
+            </div>
+        </div>
+
+        <section class="card">
+            <label class="field-label" for="judul-room">Judul Room</label>
+            <input class="text-input" id="judul-room" type="text" value="Evaluasi Pembelajaran Hari Ini">
+        </section>
+
+        <section class="card question-card">
+            <div class="question-head">
+                <span class="pill pill-purple">Pertanyaan 1</span>
+                <span class="pill pill-grey">Teks Bebas</span>
+            </div>
+            <input class="text-input" type="text" value="bagaimana menurutmu materi hari ini?">
+            <input class="text-input placeholder-input" type="text" placeholder="Peserta akan mengetik jawaban di sini...">
+        </section>
+
+        <section class="card question-card">
+            <div class="question-head">
+                <span class="pill pill-purple">Pertanyaan 2</span>
+                <span class="pill pill-grey">Teks Bebas</span>
+            </div>
+            <input class="text-input" type="text" value="Apa saran untuk perbaikan?">
+            <input class="text-input placeholder-input" type="text" placeholder="Peserta akan mengetik jawaban di sini...">
+        </section>
+
+        <button class="add-question-btn">
+            <span class="plus">+</span>Tambah Pertanyaan
+        </button>
+
+        <div class="actions">
+            <button  class="btn btn-secondary">Batal</button>
+            <button  class="btn btn-primary">Simpan<span class="arrow">&rarr;</span></button>
+        </div>
+    </main>
+
+</body>
+</html>
