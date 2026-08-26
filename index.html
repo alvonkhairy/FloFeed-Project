@@ -1,67 +1,28 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>FloFeed — Login</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FloFeed - Berbagi Pendapat</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <header class="topbar">
-      <div class="brand">
-        <div class="brand-icon"></div>
-        <span class="brand-name">FloFeed</span>
-      </div>
-      <div></div>
-    </header>
-
-    <main class="page login-page">
-      <section class="card">
-        <h1 class="form-title">Masuk ke FloFeed</h1>
-        <p class="form-sub">
-          Masukkan akun Anda untuk mengakses room dan membuat pertanyaan.
+    <main class="intro-page">
+      <section class="intro-hero" aria-labelledby="intro-title">
+        <p class="intro-brand">FloFeed</p>
+        <h1 id="intro-title">Punya Pendapat? <span>Kami Siap Mendengar.</span></h1>
+        <p class="intro-description">
+          Bagikan ide, kritik, dan saranmu melalui FloFeed. Identitas tetap
+          terlindungi, sehingga kamu dapat berbicara lebih bebas dan jujur.
         </p>
+        <a class="btn btn-primary intro-login" href="login.html">Login</a>
+      </section>
 
-        <form action="home.html" method="get" aria-label="Login form">
-          <div class="input-row">
-            <label class="field-label" for="email">Email atau Username</label>
-            <input
-              id="email"
-              name="email"
-              class="text-input"
-              type="text"
-              placeholder="you@domain.com"
-              autocomplete="username"
-            />
-          </div>
-
-          <div class="input-row">
-            <label class="field-label" for="password">Kata Sandi</label>
-            <input
-              id="password"
-              name="password"
-              class="text-input"
-              type="password"
-              placeholder="Masukkan password"
-              autocomplete="current-password"
-            />
-          </div>
-
-          <div class="meta">
-            <label>
-              <input type="checkbox" name="remember" />
-              <span>Ingat saya</span>
-            </label>
-            <a href="#">Lupa kata sandi?</a>
-          </div>
-
-          <div class="actions">
-            <button type="submit" class="btn btn-primary">Masuk</button>
-          </div>
-        </form>
-
-        <p class="footer-note">
-          Belum punya akun?
-          <a href="#">Daftar</a>
+      <section class="intro-how" aria-labelledby="how-title">
+        <h2 id="how-title">Bagaimana cara kerjanya?</h2>
+        <p>
+          FloFeed membantu kamu menyampaikan pendapat dengan mudah, aman, dan
+          anonim, sehingga setiap masukan dapat didengar dengan lebih jujur.
         </p>
       </section>
     </main>

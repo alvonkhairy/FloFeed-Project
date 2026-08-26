@@ -4,41 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FloFeed-buat soal</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <header class="topbar">
 
-        <div class="brand">
-            <div class="brand-icon" aria-hidden="true"> </div>
+        <a class="brand" href="home.html" aria-label="FloFeed home">
             <span class="brand-name">FloFeed</span>
-        </div>
+        </a>
 
         <details class="account">
             <summary class="account-trigger">
-                <span class="avatar">RP</span>
-                <span class="account-name">Rizky Pratama</span>
+                <span class="avatar">UN</span>
+                <span class="account-name">Upik Nambo</span>
                 <span class="chevron">&#9662;</span>
             </summary>
             <div class="account-panel">
                 <div class="account-info">
-                    <p class="name">Rizky Pratama</p>
-                    <p class="email">rizky@email.com</p>
+                    <p class="name">Upik Nambo</p>
+                    <p class="email">upik@email.com</p>
                 </div>
                 <div class="account-divider"></div>
-                <button class="logout-btn">
-                    <span class="logout-icon">&#8618;</span>
-                    Logout
-                </button>
+                <a class="logout-btn" href="login.html">Logout</a>
             </div>
         </details>
 
     </header>
 
-    <main class="page create-page">
+    <main class ="page">
         <div class="page-header">
-            <button class="back-btn" aria-label="Kembali">
-                <a href="home.html" class="back-btn" aria-label="Kembali">&larr;</a>
-            </button>
+            <a class="back-btn" href="home.html" aria-label="Kembali">&larr;</a>
             <div class="page-title-group">
                 <h1>Buat Room Baru</h1>
                 <p>Rancang pertanyaan untuk peserta Anda</p>
@@ -73,8 +68,8 @@
         </button>
 
         <div class="actions">
-           <a href="home.html" class="btn btn-secondary text-decoration-none">Batal</a>
-            <button  class="btn btn-primary">Simpan<span class="arrow">&rarr;</span></button>
+            <a class="btn btn-secondary" href="home.html">Batal</a>
+            <a class="btn btn-primary" href="kondisi-publikasi.html">Simpan<span class="arrow">&rarr;</span></a>
         </div>
     </main>
 
