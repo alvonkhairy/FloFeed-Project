@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FloFeed-buat soal</title>
-   <link rel="stylesheet" href="assets/css/buat-soal.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <header class="topbar">
 
-        <div class="brand">
-            <div class="brand-icon"> </div>
+        <a class="brand" href="home.html" aria-label="FloFeed home">
+            <span class="brand-icon" aria-hidden="true"></span>
             <span class="brand-name">FloFeed</span>
-        </div>
+        </a>
 
         <details class="account">
             <summary class="account-trigger">
@@ -23,13 +23,10 @@
             <div class="account-panel">
                 <div class="account-info">
                     <p class="name">Upik Nambo</p>
-                    <p class="email">UpNam@email.com</p>
+                    <p class="email">upik@email.com</p>
                 </div>
                 <div class="account-divider"></div>
-                <button class="logout-btn">
-                    <span class="logout-icon">&#8618;</span>
-                    Logout
-                </button>
+                <a class="logout-btn" href="index.html">Logout</a>
             </div>
         </details>
 
@@ -37,7 +34,7 @@
 
     <main class ="page">
         <div class="page-header">
-            <button class="back-btn" aria-label="Kembali">&larr;</button> 
+            <a class="back-btn" href="home.html" aria-label="Kembali">&larr;</a>
             <div class="page-title-group">
                 <h1>Buat Room Baru</h1>
                 <p>Rancang pertanyaan untuk peserta Anda</p>
@@ -72,8 +69,8 @@
         </button>
 
         <div class="actions">
-            <button  class="btn btn-secondary">Batal</button>
-            <button  class="btn btn-primary">Simpan<span class="arrow">&rarr;</span></button>
+            <a class="btn btn-secondary" href="home.html">Batal</a>
+            <a class="btn btn-primary" href="kondisi-publikasi.html">Simpan<span class="arrow">&rarr;</span></a>
         </div>
     </main>
 

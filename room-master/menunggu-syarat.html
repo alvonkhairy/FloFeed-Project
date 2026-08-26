@@ -4,17 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FloFeed - Evaluasi Matematika</title>
-<link rel="stylesheet" href="../assets/css/menunggu-syarat.css">
+<link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
 
-  <div class="top-accent"></div>
-
   <header class="topbar">
-    <div class="brand">
-      <div class="brand-icon"></div>
+    <a class="brand" href="../home.html" aria-label="FloFeed home">
+      <span class="brand-icon" aria-hidden="true"></span>
       <span class="brand-name">FloFeed</span>
-    </div>
+    </a>
 
     <details class="account">
       <summary class="account-trigger">
@@ -26,45 +24,42 @@
       <div class="account-panel">
         <div class="account-info">
           <p class="name">Upik Nambo</p>
-          <p class="email">UpNam@email.com</p>
+          <p class="email">upik@email.com</p>
         </div>
         <div class="account-divider"></div>
-        <button class="logout-btn">
-          <span class="logout-icon">&#8618;</span>
-          Logout
-        </button>
+        <a class="logout-btn" href="../index.html">Logout</a>
       </div>
     </details>
   </header>
 
-  <main class="page">
+  <main class="room-page">
 
-    <div class="page-header-row">
-      <button class="back-btn" aria-label="Kembali">&larr;</button>
-      <div class="page-title-group">
+    <section class="room-heading">
+      <a class="room-back" href="../home.html" aria-label="Kembali">&larr;</a>
+      <div class="room-title">
         <h1>Evaluasi Matematika</h1>
         <p>Room Master &middot; Kode: EVL-2847</p>
       </div>
-      <span class="status-pill">&#9201; Menunggu Syarat</span>
-    </div>
+      <span class="room-state"><span class="state-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" /><path d="M12 7v5l3 2" /></svg></span>Menunggu Syarat</span>
+    </section>
 
-    <nav class="tabs">
-      <button class="tab">
-        <span class="tab-icon">&#128172;</span> Feedback Anonim
-      </button>
-      <button class="tab">
-        <span class="tab-icon">&#128101;</span> Status Peserta
-      </button>
-      <button class="tab">
-        <span class="tab-icon">&#128202;</span> Statistik
-      </button>
-      <button class="tab tab-active">
-        <span class="tab-icon">&#9201;</span> Menunggu Syarat
-      </button>
+    <nav class="room-tabs" aria-label="Navigasi room">
+      <a class="room-tab" href="index.html">
+        <span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14v10H9l-4 3V6Z" /></svg></span> Feedback Anonim
+      </a>
+      <a class="room-tab" href="status-peserta.html">
+        <span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3" /><path d="M3 19c.4-2.8 2.4-4.5 6-4.5s5.6 1.7 6 4.5M16 5.5a3 3 0 0 1 0 5.8M17 15.7c2.3.5 3.6 2 4 4.3" /></svg></span> Status Peserta
+      </a>
+      <a class="room-tab" href="statistik.html">
+        <span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19V9M12 19V5M19 19v-7" /></svg></span> Statistik
+      </a>
+      <a class="room-tab active" href="menunggu-syarat.html">
+        <span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" /><path d="M12 7v5l3 2" /></svg></span> Menunggu Syarat
+      </a>
     </nav>
 
     <div class="waiting-card">
-      <div class="waiting-icon">&#9201;</div>
+      <div class="waiting-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" /><path d="M12 7v5l3 2" /></svg></div>
       <h2 class="waiting-title">Feedback Sedang Diproses</h2>
       <p class="waiting-subtitle">Menunggu syarat terpenuhi sebelum feedback ditampilkan</p>
 
@@ -106,8 +101,6 @@
     </div>
 
   </main>
-
-  <button class="help-fab" aria-label="Bantuan">?</button>
 
 </body>
 </html>

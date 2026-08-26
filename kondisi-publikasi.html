@@ -4,18 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kondisi Publikasi - FloFeed</title>
-    <link rel="stylesheet" href="assets/css/kondisi-publikasi.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
     <header class="topbar">
       <a class="brand" href="home.html" aria-label="FloFeed home"
-        ><span class="brand-name">FloFeed</span></a
+        ><span class="brand-icon" aria-hidden="true"></span><span class="brand-name">FloFeed</span></a
       >
       <details class="account">
         <summary class="account-trigger">
           <span class="avatar">UN</span
           ><span class="account-name">Upik Nambo</span
-          >
+          ><span class="chevron" aria-hidden="true">&#9662;</span>
         </summary>
         <div class="account-panel">
           <div class="account-info">
@@ -30,7 +30,7 @@
 
     <main class="publication-page">
       <div class="page-heading">
-        <a class="back-btn" href="jawab-soal.html" aria-label="Kembali"
+        <a class="back-btn" href="buat-soal.html" aria-label="Kembali"
           >&larr;</a
         >
         <div>
@@ -150,10 +150,10 @@
         </div>
       </section>
       <div class="actions">
-        <a class="btn btn-secondary" href="jawab-soal.html">Kembali</a
-        ><button class="btn btn-primary" id="confirmBtn" type="button">
+        <a class="btn btn-secondary" href="buat-soal.html">Kembali</a
+        ><a class="btn btn-primary" id="confirmBtn" href="room-master/index.html">
           Konfirmasi Aturan
-        </button>
+        </a>
       </div>
     </main>
   </body>

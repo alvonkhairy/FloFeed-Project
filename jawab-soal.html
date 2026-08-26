@@ -1,30 +1,38 @@
-<!doctype html>
 <!DOCTYPE html>
 <html lang="id">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Jawab Soal - FloFeed</title><link rel="stylesheet" href="assets/css/style.css"></head>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FloFeed - Evaluasi Pembelajaran</title>
-<link rel="stylesheet" href="assets/css/jawab-soal.css">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 	
 	
-  <!-- Header -->
-  <div class="header">
-    <div class="header-left">
-      <div class="logo-icon">&#9673;</div>
-      <span class="logo-text">FloFeed</span>
-    </div>
-    <div class="header-right">
-      <div class="avatar">RP</div>
-      <span class="user-name">Rizky Pratama</span>
-      <span class="dropdown-arrow">&#9662;</span>
-    </div>
-  </div>
+  <header class="topbar">
+    <a class="brand" href="home.html" aria-label="FloFeed home">
+      <span class="brand-icon" aria-hidden="true"></span>
+      <span class="brand-name">FloFeed</span>
+    </a>
+    <details class="account">
+      <summary class="account-trigger">
+        <span class="avatar">UN</span>
+        <span class="account-name">Upik Nambo</span>
+        <span class="chevron" aria-hidden="true">&#9662;</span>
+      </summary>
+      <div class="account-panel">
+        <div class="account-info">
+          <p class="name">Upik Nambo</p>
+          <p class="email">upik@email.com</p>
+        </div>
+        <div class="account-divider"></div>
+        <a class="logout-btn" href="index.html">Logout</a>
+      </div>
+    </details>
+  </header>
 
   <!-- Main content -->
-  <div class="container">
+  <main class="page answer-page">
 
     <!-- Title card -->
     <div class="card title-card">
@@ -58,12 +66,11 @@
 
     <!-- Buttons -->
     <div class="button-row">
-      <button class="btn btn-cancel">Batal</button>
-      <button class="btn btn-submit">&#9992; Kirim Feedback</button>
+      <a class="btn btn-cancel" href="home.html">Batal</a>
+      <a class="btn btn-submit" href="kondisi-publikasi.html">&#9992; Kirim Feedback</a>
     </div>
 
-  </div>
+  </main>
 
 </body>
-</html>
 </html>
