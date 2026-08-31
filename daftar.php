@@ -1,3 +1,52 @@
+<?php
+session_start();
+require_once __DIR__ . '/koneksi.php';
+
+if (isset($_SESSION['user_id'])) {
+    header('Location: home.php');
+    exit;
+}
+
+$error = '';
+$success = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = trim($_POST['username'] ?? '');
+    $email = trim($_POST['email'] ?? '');
+    $password = $_POST['password'] ?? '';
+    $passwordConfirmation = $_POST['password-confirmation'] ?? '';
+
+    if ($username === '' || $email === '' || $password === '' || $passwordConfirmation === '') {
+        $error = 'Semua field wajib diisi.';
+    } elseif (strlen($password) < 8) {
+        $error = 'Password minimal 8 karakter.';
+    } elseif ($password !== $passwordConfirmation) {
+        $error = 'Konfirmasi password tidak cocok.';
+    } else {
+        $checkStmt = mysqli_prepare($conn, 'SELECT user_id FROM users WHERE email = ? OR name = ? LIMIT 1');
+        mysqli_stmt_bind_param($checkStmt, 'ss', $email, $username);
+        mysqli_stmt_execute($checkStmt);
+        $existingUser = mysqli_stmt_get_result($checkStmt);
+
+        if (mysqli_num_rows($existingUser) > 0) {
+            $error = 'Email atau username sudah terdaftar.';
+        } else {
+            $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+            $insertStmt = mysqli_prepare($conn, 'INSERT INTO users (name, email, password) VALUES (?, ?, ?)');
+            mysqli_stmt_bind_param($insertStmt, 'sss', $username, $email, $hashedPassword);
+
+            if (mysqli_stmt_execute($insertStmt)) {
+                $success = 'Pendaftaran berhasil. Silakan masuk.';
+                $_SESSION['flash_message'] = $success;
+                header('Location: login.php');
+                exit;
+            }
+
+            $error = 'Pendaftaran gagal. Silakan coba lagi.';
+        }
+    }
+}
+?>
 <!doctype html>
 <html lang="id">
 	<head>
@@ -14,7 +63,13 @@
 					Daftar untuk bergabung, membuat room, dan menyampaikan pendapat.
 				</p>
 
-				<form action="login.php" method="get" aria-label="Form pendaftaran">
+				<?php if ($error !== ''): ?>
+					<p style="color: #b42318; background: #fef3f2; border: 1px solid #fecdca; padding: 10px 12px; border-radius: 8px; margin-bottom: 16px;">
+						<?php echo htmlspecialchars($error, ENT_QUOTES, 'UTF-8'); ?>
+					</p>
+				<?php endif; ?>
+
+				<form action="daftar.php" method="post" aria-label="Form pendaftaran">
 					<div class="input-row">
 						<label class="field-label" for="username">Username</label>
 						<input

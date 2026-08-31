@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['user_id'])) {
+    header('Location: login.php');
+    exit;
+}
+
+$username = $_SESSION['username'] ?? 'User';
+$email = $_SESSION['email'] ?? 'user@example.com';
+$initials = strtoupper(substr($username, 0, 2));
+?>
 <!doctype html>
 <html lang="id">
 	<head>
@@ -14,17 +26,17 @@
 
 			<details class="account">
 				<summary class="account-trigger">
-					<span class="avatar">UN</span>
-					<span class="account-name">Upik Nambo</span>
+					<span class="avatar"><?php echo htmlspecialchars($initials, ENT_QUOTES, 'UTF-8'); ?></span>
+					<span class="account-name"><?php echo htmlspecialchars($username, ENT_QUOTES, 'UTF-8'); ?></span>
 					<span class="chevron" aria-hidden="true">&#9662;</span>
 				</summary>
 				<div class="account-panel">
 					<div class="account-info">
-						<p class="name">Upik Nambo</p>
-						<p class="email">upik@email.com</p>
+						<p class="name"><?php echo htmlspecialchars($username, ENT_QUOTES, 'UTF-8'); ?></p>
+						<p class="email"><?php echo htmlspecialchars($email, ENT_QUOTES, 'UTF-8'); ?></p>
 					</div>
 					<div class="account-divider"></div>
-					  <a class="logout-btn" href="login.php">Logout</a>
+					<a class="logout-btn" href="logout.php">Logout</a>
 				</div>
 			</details>
 		</header>
