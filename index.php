@@ -15,7 +15,7 @@
           Bagikan ide, kritik, dan saranmu melalui FloFeed. Identitas tetap
           terlindungi, sehingga kamu dapat berbicara lebih bebas dan jujur.
         </p>
-        <a class="btn btn-primary intro-login" href="login.html">Login</a>
+        <a class="btn btn-primary intro-login" href="login.php">Login</a>
       </section>
 
       <section class="intro-how" aria-labelledby="how-title">

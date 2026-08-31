@@ -14,7 +14,7 @@
           Masukkan akun Anda untuk mengakses room dan membuat pertanyaan.
         </p>
 
-        <form action="home.html" method="get" aria-label="Login form">
+        <form action="home.php" method="get" aria-label="Login form">
           <div class="input-row">
             <label class="field-label" for="email">Email atau Username</label>
             <input
@@ -53,7 +53,7 @@
 
         <p class="footer-note">
           Belum punya akun?
-          <a href="daftar.html">Daftar</a>
+          <a href="daftar.php">Daftar</a>
         </p>
       </section>
     </main>

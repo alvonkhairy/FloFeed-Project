@@ -8,7 +8,7 @@
   </head>
   <body>
     <header class="topbar">
-      <a class="brand" href="home.html" aria-label="FloFeed home"
+      <a class="brand" href="home.php" aria-label="FloFeed home"
         ><span class="brand-name">FloFeed</span></a
       >
       <details class="account">
@@ -23,14 +23,14 @@
             <p class="email">upik@email.com</p>
           </div>
           <div class="account-divider"></div>
-          <a class="logout-btn" href="login.html">Logout</a>
+          <a class="logout-btn" href="login.php">Logout</a>
         </div>
       </details>
     </header>
 
     <main class="publication-page">
       <div class="page-heading">
-        <a class="back-btn" href="buat-soal.html" aria-label="Kembali"
+        <a class="back-btn" href="buat-soal.php" aria-label="Kembali"
           >&larr;</a
         >
         <div>
@@ -150,8 +150,8 @@
         </div>
       </section>
       <div class="actions">
-        <a class="btn btn-secondary" href="buat-soal.html">Kembali</a
-        ><a class="btn btn-primary" id="confirmBtn" href="room-master/index.html">
+        <a class="btn btn-secondary" href="buat-soal.php">Kembali</a
+        ><a class="btn btn-primary" id="confirmBtn" href="room-master/index.php">
           Konfirmasi Aturan
         </a>
       </div>

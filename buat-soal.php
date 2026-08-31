@@ -9,7 +9,7 @@
 <body>
     <header class="topbar">
 
-        <a class="brand" href="home.html" aria-label="FloFeed home">
+        <a class="brand" href="home.php" aria-label="FloFeed home">
             <span class="brand-name">FloFeed</span>
         </a>
 
@@ -25,7 +25,7 @@
                     <p class="email">upik@email.com</p>
                 </div>
                 <div class="account-divider"></div>
-                <a class="logout-btn" href="login.html">Logout</a>
+                <a class="logout-btn" href="login.php">Logout</a>
             </div>
         </details>
 
@@ -33,7 +33,7 @@
 
     <main class ="page">
         <div class="page-header">
-            <a class="back-btn" href="home.html" aria-label="Kembali">&larr;</a>
+            <a class="back-btn" href="home.php" aria-label="Kembali">&larr;</a>
             <div class="page-title-group">
                 <h1>Buat Room Baru</h1>
                 <p>Rancang pertanyaan untuk peserta Anda</p>
@@ -68,8 +68,8 @@
         </button>
 
         <div class="actions">
-            <a class="btn btn-secondary" href="home.html">Batal</a>
-            <a class="btn btn-primary" href="kondisi-publikasi.html">Simpan<span class="arrow">&rarr;</span></a>
+            <a class="btn btn-secondary" href="home.php">Batal</a>
+            <a class="btn btn-primary" href="kondisi-publikasi.php">Simpan<span class="arrow">&rarr;</span></a>
         </div>
     </main>
 

@@ -14,7 +14,7 @@
 					Daftar untuk bergabung, membuat room, dan menyampaikan pendapat.
 				</p>
 
-				<form action="login.html" method="get" aria-label="Form pendaftaran">
+				<form action="login.php" method="get" aria-label="Form pendaftaran">
 					<div class="input-row">
 						<label class="field-label" for="username">Username</label>
 						<input
@@ -83,7 +83,7 @@
 
 				<p class="footer-note">
 					Sudah punya akun?
-					<a href="login.html">Masuk</a>
+					<a href="login.php">Masuk</a>
 				</p>
 			</section>
 		</main>

@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<header class="topbar">
-			<a class="brand" href="home.html" aria-label="FloFeed home">
+			<a class="brand" href="home.php" aria-label="FloFeed home">
 				<span class="brand-name">FloFeed</span>
 			</a>
 
@@ -24,7 +24,7 @@
 						<p class="email">upik@email.com</p>
 					</div>
 					<div class="account-divider"></div>
-					<a class="logout-btn" href="login.html">Logout</a>
+					<a class="logout-btn" href="login.php">Logout</a>
 				</div>
 			</details>
 		</header>
@@ -34,7 +34,7 @@
 				<div class="thank-you-icon" aria-hidden="true">&#10003;</div>
 				<h1 id="thank-you-title">Terimakasih telah mengisi</h1>
 				<p>Feedback kamu sudah berhasil dikirim.</p>
-				<a class="btn btn-submit" href="home.html">Kembali ke Beranda</a>
+				<a class="btn btn-submit" href="home.php">Kembali ke Beranda</a>
 			</section>
 		</main>
 	</body>
