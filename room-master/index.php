@@ -9,7 +9,7 @@
 <body>
 
   <header class="topbar">
-    <a class="brand" href="../home.html" aria-label="FloFeed home">
+    <a class="brand" href="../home.php" aria-label="FloFeed home">
       <span class="brand-name">FloFeed</span>
     </a>
 
@@ -26,7 +26,7 @@
             <p class="email">upik@email.com</p>
         </div>
         <div class="account-divider"></div>
-        <a class="logout-btn" href="../login.html">Logout</a>
+        <a class="logout-btn" href="../login.php">Logout</a>
       </div>
     </details>
   </header>
@@ -34,7 +34,7 @@
   <main class="room-page">
 
     <div class="page-header-row">
-      <a class="back-btn" href="../home.html" aria-label="Kembali">&larr;</a>
+      <a class="back-btn" href="../home.php" aria-label="Kembali">&larr;</a>
       <div class="page-title-group">
         <h1>Evaluasi Matematika</h1>
         <p>Room Master &middot; Kode: EVL-2847</p>
@@ -43,16 +43,16 @@
     </div>
 
     <nav class="room-tabs" aria-label="Navigasi room">
-      <a class="room-tab active" href="index.html">
+      <a class="room-tab active" href="index.php">
         <span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14v10H9l-4 3V6Z" /></svg></span> Feedback Anonim
       </a>
-      <a class="room-tab" href="status-peserta.html">
+      <a class="room-tab" href="status-peserta.php">
         <span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3" /><path d="M3 19c.4-2.8 2.4-4.5 6-4.5s5.6 1.7 6 4.5M16 5.5a3 3 0 0 1 0 5.8M17 15.7c2.3.5 3.6 2 4 4.3" /></svg></span> Status Peserta
       </a>
-      <a class="room-tab" href="statistik.html">
+      <a class="room-tab" href="statistik.php">
         <span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19V9M12 19V5M19 19v-7" /></svg></span> Statistik
       </a>
-      <a class="room-tab" href="menunggu-syarat.html">
+      <a class="room-tab" href="menunggu-syarat.php">
         <span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" /><path d="M12 7v5l3 2" /></svg></span> Menunggu Syarat
       </a>
     </nav>

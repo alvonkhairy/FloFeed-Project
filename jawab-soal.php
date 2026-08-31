@@ -10,7 +10,7 @@
 	
 	
   <header class="topbar">
-    <a class="brand" href="home.html" aria-label="FloFeed home">
+    <a class="brand" href="home.php" aria-label="FloFeed home">
       <span class="brand-name">FloFeed</span>
     </a>
     <details class="account">
@@ -25,7 +25,7 @@
           <p class="email">upik@email.com</p>
         </div>
         <div class="account-divider"></div>
-        <a class="logout-btn" href="login.html">Logout</a>
+        <a class="logout-btn" href="login.php">Logout</a>
       </div>
     </details>
   </header>
@@ -65,8 +65,8 @@
 
     <!-- Buttons -->
     <div class="button-row">
-      <a class="btn btn-cancel" href="home.html">Batal</a>
-      <a class="btn btn-submit" href="home.html">&#9992; Kirim Feedback</a>
+      <a class="btn btn-cancel" href="home.php">Batal</a>
+      <a class="btn btn-submit" href="terimakasih.php">&#9992; Kirim Feedback</a>
     </div>
 
   </main>
