@@ -14,7 +14,7 @@
 
     <main class="publication-page">
       <div class="page-heading">
-        <a class="back-btn" href="buat-soal.php" aria-label="Kembali"
+        <a class="back-btn" href="room-create.php" aria-label="Kembali"
           >&larr;</a
         >
         <div>
@@ -134,8 +134,8 @@
         </div>
       </section>
       <div class="actions">
-        <a class="btn btn-secondary" href="buat-soal.php">Kembali</a
-        ><a class="btn btn-primary" id="confirmBtn" href="room-master/index.php">
+        <a class="btn btn-secondary" href="room-create.php">Kembali</a
+        ><a class="btn btn-primary" id="confirmBtn" href="room-master/room-anonymous-feedback.php">
           Konfirmasi Aturan
         </a>
       </div>
