@@ -106,7 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <p class="footer-note">
           Belum punya akun?
-          <a href="daftar.php">Daftar</a>
+          <a href="register.php">Daftar</a>
         </p>
       </section>
     </main>
