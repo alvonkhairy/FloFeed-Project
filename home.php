@@ -26,7 +26,7 @@ $initials = strtoupper(substr($username, 0, 2));
 
 		<main class="home-page">
 			<section class="welcome" aria-labelledby="welcome-title">
-				<h1 id="welcome-title">Selamat Pagi, &#128075;</h1>
+				<h1 id="welcome-title",>Selamat Pagi, <?= htmlspecialchars($username, ENT_QUOTES, 'UTF-8'); ?>  &#128075;</h1>
 				<p>Apa yang ingin anda lakukan hari ini?</p>
 			</section>
 

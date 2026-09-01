@@ -59,6 +59,12 @@ button, input, textarea, a { font: inherit; }
 	align-items: center;
 }
 
+.menu-account-group {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
 .brand { gap: 10px; text-decoration: none; }
 .header-left { gap: 14px; }
 .header-right { gap: 8px; }
@@ -67,6 +73,36 @@ button, input, textarea, a { font: inherit; }
 	color: var(--purple);
 	font-size: 23px;
 	font-weight: 700;
+}
+
+.menu {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.menu-item {
+	padding: 8px 14px;
+	border: none;
+	background: var(--purple-soft);
+	color: var(--purple);
+	font-size: 14px;
+	font-weight: 500;
+	text-decoration: none;
+	cursor: pointer;
+	border-radius: var(--radius-control);
+	transition: background-color 0.2s ease;
+}
+
+.menu-item:hover {
+	background: #ec008c;
+	color: #fff;
+}
+
+.menu-item.active {
+	background: #ec008c;
+	color: #fff;
+	font-weight: 600;
 }
 
 .account { position: relative; }
