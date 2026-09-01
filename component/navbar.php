@@ -24,7 +24,7 @@ function renderNavbar(string $basePath = '.') : void
         <div class="menu-account-group">
             <nav class="menu">
                 <a class="menu-item <?= $isHome ? 'active' : ''; ?>" href="<?= htmlspecialchars(rtrim($basePath, '/') . '/home.php', ENT_QUOTES, 'UTF-8'); ?>">Home</a>
-                <a class="menu-item <?= $isRoom ? 'active' : ''; ?>" href="<?= htmlspecialchars(rtrim($basePath, '/') . '/room.php', ENT_QUOTES, 'UTF-8'); ?>">My Room</a>
+                <a class="menu-item <?= $isRoom ? 'active' : ''; ?>" href="<?= htmlspecialchars(rtrim($basePath, '/') . '/room-view.php', ENT_QUOTES, 'UTF-8'); ?>">My Room</a>
             </nav>
 
             <details class="account">
