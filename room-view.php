@@ -23,12 +23,12 @@
 
 			<section class="card rooms-list-card" aria-labelledby="rooms-list-title">
 				<h2 class="section-title" id="rooms-list-title">Semua Room</h2>
-				<a class="list-item" href="room-master/statistik.php">
+				<a class="list-item" href="room-master/room-statistics.php">
 					<span class="room-icon" aria-hidden="true">&#9632;</span>
 					<div class="item-copy"><p class="item-title">Evaluasi Matematika</p><p class="item-subtitle">3 peserta &nbsp; - &nbsp; <strong style="color: var(--purple)">14 respons</strong></p></div>
 					<span class="room-card-link" aria-hidden="true">&#8250;</span>
 				</a>
-				<a class="list-item" href="room-master/statistik.php">
+				<a class="list-item" href="room-master/room-statistics.php">
 					<span class="room-icon" aria-hidden="true">&#9632;</span>
 					<div class="item-copy"><p class="item-title">Evaluasi PPKN</p><p class="item-subtitle">7 peserta &nbsp; - &nbsp; <strong style="color: var(--purple)">9 respons</strong></p></div>
 					<span class="room-card-link" aria-hidden="true">&#8250;</span>
