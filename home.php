@@ -18,7 +18,7 @@ $initials = strtoupper(substr($username, 0, 2));
 		<title>FloFeed - Home</title>
 		<link rel="stylesheet" href="assets/css/style.css" />
 	</head>
-	<body>
+	<body class="home">
 <?php require __DIR__ . '/components/navbar.php'; ?>
 
 		<main class="home-page">

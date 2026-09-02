@@ -6,7 +6,7 @@
 		<title>FloFeed - Room Saya</title>
 		<link rel="stylesheet" href="assets/css/style.css" />
 	</head>
-	<body>
+	<body class="room-view">
 <?php require __DIR__ . '/components/navbar.php'; ?>
 
 		<main class="page rooms-page">

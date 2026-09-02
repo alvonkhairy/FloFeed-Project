@@ -61,12 +61,39 @@ button, input, textarea, a { font: inherit; }
 
 .brand { gap: 10px; text-decoration: none; }
 .header-left { gap: 14px; }
-.header-right { gap: 8px; }
+.header-right { display: flex; align-items: center; gap: 10px; }
 
 .brand-name, .logo-text {
 	color: var(--purple);
 	font-size: 23px;
 	font-weight: 700;
+}
+
+.main-nav {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.nav-link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px 12px;
+	border-radius: 10px;
+	color: var(--muted);
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+	transition: all 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active,
+body.home .home-link,
+body.room-view .room-link {
+	background: var(--purple-soft);
+	color: var(--purple);
 }
 
 .account { position: relative; }
@@ -105,19 +132,26 @@ button, input, textarea, a { font: inherit; }
 .account-info .email { color: var(--muted); font-size: 13px; }
 .account-divider { height: 1px; background: var(--line); }
 .logout-btn {
-	display: block;
-	width: 100%;
-	padding: 14px 20px;
-	border: 0;
-	background: #fdeeee;
-	color: #e05263;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px 12px;
+	border: 1px solid #f7d8e8;
+	border-radius: 10px;
+	background: #ffe9f4;
+	color: #d94c99;
 	cursor: pointer;
-	font-size: 13px;
+	font-size: 14px;
 	font-weight: 600;
-	text-align: left;
+	text-align: center;
 	text-decoration: none;
+	transition: all 0.2s ease;
 }
-.logout-btn:hover { background: #fbdcdc; }
+.logout-btn.compact { margin-right: 4px; }
+.logout-btn:hover {
+	background: #ffdbea;
+	transform: translateY(-1px);
+}
 
 .page, .room-page {
 	width: min(calc(100% - 48px), 932px);
