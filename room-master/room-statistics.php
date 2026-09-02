@@ -23,10 +23,12 @@
       <span class="status-pill"><span class="state-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" /><path d="M12 7v5l3 2" /></svg></span>Menunggu Syarat</span>
     </div>
 
-    <?php
-    require_once __DIR__ . '/../component/navigation-room-master.php';
-    renderRoomMasterNavigation('..', 'statistik');
-    ?>
+    <nav class="room-tabs" aria-label="Navigasi room">
+      <a class="room-tab" href="room-anonymous-feedback.php"><span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14v10H9l-4 3V6Z" /></svg></span> Feedback Anonim</a>
+      <a class="room-tab" href="room-participant-status.php"><span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3" /><path d="M3 19c.4-2.8 2.4-4.5 6-4.5s5.6 1.7 6 4.5M16 5.5a3 3 0 0 1 0 5.8M17 15.7c2.3.5 3.6 2 4 4.3" /></svg></span> Status Peserta</a>
+      <a class="room-tab active" href="room-statistics.php"><span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19V9M12 19V5M19 19v-7" /></svg></span> Statistik</a>
+      <a class="room-tab" href="room-waiting-requirements.php"><span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" /><path d="M12 7v5l3 2" /></svg></span> Menunggu Syarat</a>
+    </nav>
 
     <!-- Statistics content -->
     <div class="content">
