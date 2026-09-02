@@ -19,27 +19,7 @@ $initials = strtoupper(substr($username, 0, 2));
 		<link rel="stylesheet" href="assets/css/style.css" />
 	</head>
 	<body>
-		<header class="topbar">
-			<a class="brand" href="home.php" aria-label="FloFeed home">
-				<span class="brand-name">FloFeed</span>
-			</a>
-
-			<details class="account">
-				<summary class="account-trigger">
-					<span class="avatar"><?php echo htmlspecialchars($initials, ENT_QUOTES, 'UTF-8'); ?></span>
-					<span class="account-name"><?php echo htmlspecialchars($username, ENT_QUOTES, 'UTF-8'); ?></span>
-					<span class="chevron" aria-hidden="true">&#9662;</span>
-				</summary>
-				<div class="account-panel">
-					<div class="account-info">
-						<p class="name"><?php echo htmlspecialchars($username, ENT_QUOTES, 'UTF-8'); ?></p>
-						<p class="email"><?php echo htmlspecialchars($email, ENT_QUOTES, 'UTF-8'); ?></p>
-					</div>
-					<div class="account-divider"></div>
-					<a class="logout-btn" href="logout.php">Logout</a>
-				</div>
-			</details>
-		</header>
+<?php require __DIR__ . '/components/navbar.php'; ?>
 
 		<main class="home-page">
 			<section class="welcome" aria-labelledby="welcome-title">
