@@ -7,8 +7,6 @@
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-	
-	
   <header class="topbar">
     <a class="brand" href="home.php" aria-label="FloFeed home">
       <span class="brand-name">FloFeed</span>
