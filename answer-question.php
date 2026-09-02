@@ -64,7 +64,7 @@
     <!-- Buttons -->
     <div class="button-row">
       <a class="btn btn-cancel" href="home.php">Batal</a>
-      <a class="btn btn-submit" href="terimakasih.php">&#9992; Kirim Feedback</a>
+      <a class="btn btn-submit" href="answer-result.php">&#9992; Kirim Feedback</a>
     </div>
 
   </main>

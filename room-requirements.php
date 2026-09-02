@@ -151,7 +151,7 @@
       </section>
       <div class="actions">
         <a class="btn btn-secondary" href="buat-soal.php">Kembali</a
-        ><a class="btn btn-primary" id="confirmBtn" href="room-master/index.php">
+        ><a class="btn btn-primary" id="confirmBtn" href="room-master/room-anonymous-feedback.php">
           Konfirmasi Aturan
         </a>
       </div>
