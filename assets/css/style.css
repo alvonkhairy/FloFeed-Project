@@ -434,68 +434,26 @@ body.room-view .room-link {
 .history-list-card .section-title { margin-bottom: 10px; }
 .history-list-card .list-item { min-height: 62px; }
 .rooms-page { max-width: 1040px; }
-.rooms-page .home-grid {
-	margin-bottom: 16px;
-}
 .rooms-list-card { padding: 24px; }
 .rooms-list-card .section-title { margin-bottom: 10px; }
 .rooms-list-card .list-item { min-height: 68px; }
-.section-title-link { color: var(--ink); font-size: inherit; }
 .welcome { margin-bottom: 26px; }
 .welcome h1 { margin: 0 0 5px; font-size: 28px; }
 .welcome p { margin: 0; color: var(--muted); font-size: 16px; }
 .home-grid, .home-lower { display: grid; grid-template-columns: 1fr; gap: 16px; align-items: stretch; }
 .home-lower {
-	display: grid;
-	grid-template-columns: 1fr;
 	margin-top: 16px;
 }
-.join-card, .create-card, .create-room-card, .history-card, .rooms-card, .rooms-list-card { padding: 24px; }
-.join-card, .create-card, .create-room-card { min-height: 170px; }
-.history-card, .rooms-card { min-height: 240px; }
+.join-card, .history-card, .rooms-list-card { padding: 24px; }
+.join-card { min-height: 170px; }
+.history-card { min-height: 240px; }
 .card-heading, .section-title { display: flex; align-items: center; justify-content: space-between; margin: 0 0 12px; font-size: 22px; font-weight: 800; }
 .card-heading { justify-content: flex-start; gap: 8px; }
 .card-heading .symbol, .section-link { color: var(--purple); }
 .card-description { margin: 0 0 18px; color: #9aa4bb; font-size: 14px; }
-.join-card {
-	min-height: 170px;
-}
 .join-form { display: flex; flex-direction: column; gap: 12px; margin-top: auto; }
 .home-page .text-input { padding: 15px 16px; font-size: 15px; height: 52px; }
 .home-page .btn-primary { width: auto; align-self: flex-start; padding: 12px 22px; font-size: 15px; min-height: 44px; }
-.create-card .btn-primary { display: flex; width: 100%; margin-top: auto; }
-.create-room-card {
-	margin-bottom: 16px;
-	min-height: 170px;
-}
-.create-room-header {
-	display: flex;
-	align-items: center;
-	gap: 12px;
-	min-height: 64px;
-}
-.create-room-icon {
-	display: grid;
-	place-items: center;
-	width: 28px;
-	height: 28px;
-	border-radius: 8px;
-	font-size: 20px;
-	font-weight: 700;
-	background: var(--purple);
-	color: #fff;
-}
-.create-room-card .item-copy {
-	flex: 1;
-}
-.create-room-card .item-title {
-	font-size: 18px;
-	font-weight: 800;
-}
-.create-room-card .item-subtitle {
-	font-size: 13px;
-	line-height: 1.4;
-}
 .create-room-btn {
 	min-width: 110px;
 	padding: 14px 20px;
