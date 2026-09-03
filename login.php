@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once __DIR__ . '/koneksi.php';
+require_once __DIR__ . '/config.php';
 
 if (isset($_SESSION['user_id'])) {
     header('Location: home.php');
@@ -106,7 +106,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <p class="footer-note">
           Belum punya akun?
-          <a href="daftar.php">Daftar</a>
+          <a href="register.php">Daftar</a>
         </p>
       </section>
     </main>

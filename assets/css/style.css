@@ -59,6 +59,12 @@ button, input, textarea, a { font: inherit; }
 	align-items: center;
 }
 
+.menu-account-group {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
 .brand { gap: 10px; text-decoration: none; }
 .header-left { gap: 14px; }
 .header-right { display: flex; align-items: center; gap: 10px; }
