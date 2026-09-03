@@ -7,10 +7,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <?php
-    require_once __DIR__ . '/component/navbar.php';
-    renderNavbar('.');
-    ?>
+<?php require __DIR__ . '/components/navbar.php'; ?>
 
     <main class ="page">
         <div class="page-header">
@@ -50,7 +47,7 @@
 
         <div class="actions">
             <a class="btn btn-secondary" href="home.php">Batal</a>
-            <a class="btn btn-primary" href="room-requirements.php">Simpan<span class="arrow">&rarr;</span></a>
+            <a class="btn btn-primary" href="room-master/room-anonymous-feedback.php">Simpan<span class="arrow">&rarr;</span></a>
         </div>
     </main>
 

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once __DIR__ . '/config.php';
+require_once __DIR__ . '/koneksi.php';
 
 if (isset($_SESSION['user_id'])) {
     header('Location: home.php');
@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 					</p>
 				<?php endif; ?>
 
-				<form action="register.php" method="post" aria-label="Form pendaftaran">
+				<form action="daftar.php" method="post" aria-label="Form pendaftaran">
 					<div class="input-row">
 						<label class="field-label" for="username">Username</label>
 						<input
