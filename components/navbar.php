@@ -13,4 +13,4 @@
 				</nav>
 				<a class="logout-btn compact" href="logout.php">Logout</a>
 			</div>
-		</header>
+</header>
