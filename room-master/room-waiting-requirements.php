@@ -3,15 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base href="../">
 <title>FloFeed - Evaluasi Matematika</title>
-<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 <?php require __DIR__ . '/../components/navbar.php'; ?>
   <main class="room-page">
 
     <section class="room-heading">
-      <a class="room-back" href="../home.php" aria-label="Kembali">&larr;</a>
+      <a class="room-back" href="home.php" aria-label="Kembali">&larr;</a>
       <div class="room-title">
         <h1>Evaluasi Matematika</h1>
         <p>Room Master &middot; Kode: EVL-2847</p>

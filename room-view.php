@@ -9,14 +9,14 @@
 	<body class="room-view">
 <?php require __DIR__ . '/components/navbar.php'; ?>
 
-		<main class="page rooms-page">
-			<header class="page-header">
-				<a class="back-btn" href="home.php" aria-label="Kembali ke home">&#8249;</a>
-				<div class="page-title-group">
-					<h1>Room Saya</h1>
+		<main class="home-page rooms-page">
+			<section class="welcome room-management-header" aria-labelledby="rooms-title">
+				<div class="room-management-copy">
+					<h1 id="rooms-title">Room Saya</h1>
 					<p>Kelola dan lihat semua room yang kamu buat</p>
 				</div>
-			</header>
+				<a class="btn btn-primary create-room-btn" href="room-create.php">Buat room baru</a>
+			</section>
 
 			<section class="card rooms-list-card" aria-labelledby="rooms-list-title">
 				<h2 class="section-title" id="rooms-list-title">Semua Room</h2>

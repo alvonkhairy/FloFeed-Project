@@ -3,15 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base href="../">
 <title>Evaluasi Matematika - Statistik</title>
-<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 <?php require __DIR__ . '/../components/navbar.php'; ?>
 
   <main class="room-page">
     <div class="page-header-row">
-      <a class="back-btn" href="../home.php" aria-label="Kembali">&larr;</a>
+      <a class="back-btn" href="home.php" aria-label="Kembali">&larr;</a>
       <div class="page-title-group">
         <h1>Evaluasi Matematika</h1>
         <p>Room Master &middot; Kode: EVL-2847</p>

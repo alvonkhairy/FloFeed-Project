@@ -36,12 +36,6 @@ $initials = strtoupper(substr($username, 0, 2));
 						<button class="btn btn-primary" type="submit">Gabung</button>
 					</form>
 				</section>
-
-				<section class="card create-card" aria-labelledby="create-title">
-					<h2 class="card-heading" id="create-title"><span class="symbol">+</span>Buat Room</h2>
-					<p class="card-description">Buat room baru</p>
-					<a class="btn btn-primary" href="room-create.php">Buat</a>
-				</section>
 			</div>
 
 			<div class="home-lower">
@@ -67,19 +61,7 @@ $initials = strtoupper(substr($username, 0, 2));
 					</a>
 				</section>
 
-				<section class="card rooms-card" aria-labelledby="rooms-title">
-					<h2 class="section-title" id="rooms-title"><span class="section-title-link">Room Saya</span><a class="section-link" href="room-view.php">Lihat semua</a></h2>
-					<a class="list-item" href="room-master/room-statistics.php">
-						<span class="room-icon" aria-hidden="true">&#9632;</span>
-						<div class="item-copy"><p class="item-title">Evaluasi Matematika</p><p class="item-subtitle">3 peserta &nbsp; - &nbsp; <strong style="color: var(--purple)">14 respons</strong></p></div>
-						<span class="room-card-link" aria-hidden="true">&#8250;</span>
-					</a>
-					<a class="list-item" href="room-master/room-statistics.php">
-						<span class="room-icon" aria-hidden="true">&#9632;</span>
-						<div class="item-copy"><p class="item-title">Evaluasi PPKN</p><p class="item-subtitle">7 peserta &nbsp; - &nbsp; <strong style="color: var(--purple)">9 respons</strong></p></div>
-						<span class="room-card-link" aria-hidden="true">&#8250;</span>
-					</a>
-				</section>
+				
 			</div>
 		</main>
 	</body>
