@@ -9,7 +9,7 @@
 			<div class="header-right">
 				<nav class="main-nav" aria-label="Navigasi utama">
 					<a class="nav-link home-link" href="home.php">Beranda</a>
-					<a class="nav-link room-link" href="room-view.php">Room Saya</a>
+					<a class="nav-link room-link" href="room-management.php">Room Saya</a>
 				</nav>
 				<a class="logout-btn compact" href="logout.php">Logout</a>
 			</div>
