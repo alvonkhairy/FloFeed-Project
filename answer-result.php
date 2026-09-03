@@ -7,7 +7,10 @@
 		<link rel="stylesheet" href="assets/css/style.css" />
 	</head>
 	<body>
-<?php require __DIR__ . '/components/navbar.php'; ?>		
+		<?php
+		require_once __DIR__ . '/component/navbar.php';
+		renderNavbar('.');
+		?>
 
 		<main class="page thank-you-page">
 			<section class="card thank-you-card" aria-labelledby="thank-you-title">

@@ -7,7 +7,10 @@
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<?php require __DIR__ . '/components/navbar.php'; ?>
+	<?php
+	require_once __DIR__ . '/component/navbar.php';
+	renderNavbar('.');
+	?>
 
   <!-- Main content -->
   <main class="page answer-page">
