@@ -18,11 +18,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($login === '' || $password === '') {
         $error = 'Email/username dan password wajib diisi.';
     } else {
-        $stmt = mysqli_prepare($conn, 'SELECT user_id, name, email, password FROM users WHERE email = ? OR name = ? LIMIT 1');
-        mysqli_stmt_bind_param($stmt, 'ss', $login, $login);
-        mysqli_stmt_execute($stmt);
-        $result = mysqli_stmt_get_result($stmt);
-        $user = mysqli_fetch_assoc($result);
+        $stmt = $pdo->prepare('SELECT user_id, name, email, password FROM users WHERE email = :email OR name = :name LIMIT 1');
+        $stmt->execute([
+          'email' => $login,
+          'name' => $login,
+        ]);
+        $user = $stmt->fetch();
 
         if ($user && password_verify($password, $user['password'])) {
             $_SESSION['user_id'] = (int) $user['user_id'];
@@ -106,7 +107,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <p class="footer-note">
           Belum punya akun?
-          <a href="daftar.php">Daftar</a>
+          <a href="register.php">Daftar</a>
         </p>
       </section>
     </main>

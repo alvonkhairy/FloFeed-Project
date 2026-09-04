@@ -1,26 +1,21 @@
 <?php
-function koneksi()
-{
-    static $conn = null;
 
-    if ($conn === null) {
-        $host = getenv('DB_HOST') ?: 'localhost';
-        $username = getenv('DB_USER') ?: 'root';
-        $password = getenv('DB_PASS') ?: '';
-        $database = getenv('DB_NAME') ?: 'flofeed';
+$host = 'localhost';
+$dbname = 'flofeed';
+$username = 'root';
+$password = '';
 
-        mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-        $conn = mysqli_connect($host, $username, $password, $database);
+try {
+    $pdo = new PDO(
+        "mysql:host=$host;dbname=$dbname;charset=utf8mb4",
+        $username,
+        $password
+    );
 
-        if (!$conn) {
-            throw new RuntimeException('Koneksi database gagal: ' . mysqli_connect_error());
-        }
-
-        mysqli_set_charset($conn, 'utf8mb4');
-    }
-
-    return $conn;
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+} catch (PDOException $e) {
+    die('Database connection failed.');
 }
-
-$conn = koneksi();
 ?>
