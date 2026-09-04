@@ -4,98 +4,47 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <base href="../">
-<title>FloFeed - Evaluasi Matematika</title>
+<title>FloFeed - Jawaban Feedback 1</title>
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 <?php require __DIR__ . '/../components/navbar.php'; ?>
 
-  <main class="room-page">
-
+  <main class="room-page feedback-answer-page">
     <div class="page-header-row">
-      <a class="back-btn" href="home.php" aria-label="Kembali">&larr;</a>
+      <a class="back-btn" href="room-master/room-anonymous-home.php" aria-label="Kembali ke daftar feedback">&#8249;</a>
       <div class="page-title-group">
-        <h1>Evaluasi Matematika</h1>
-        <p>Room Master &middot; Kode: EVL-2847</p>
+        <h1>Feedback 1</h1>
+        <p>Daftar jawaban anonim</p>
       </div>
-      <span class="status-pill"><span class="state-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" /><path d="M12 7v5l3 2" /></svg></span>Menunggu Syarat</span>
     </div>
 
-    <nav class="room-tabs" aria-label="Navigasi room">
-      <a class="room-tab active" href="room-masterroom-anonymous-feedback.php">
-        <span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14v10H9l-4 3V6Z" /></svg></span> Feedback Anonim
-      </a>
-      <a class="room-tab" href="room-master/room-participant-status.php">
-        <span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3" /><path d="M3 19c.4-2.8 2.4-4.5 6-4.5s5.6 1.7 6 4.5M16 5.5a3 3 0 0 1 0 5.8M17 15.7c2.3.5 3.6 2 4 4.3" /></svg></span> Status Peserta
-      </a>
-      <a class="room-tab" href="room-master/room-statistics.php">
-        <span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19V9M12 19V5M19 19v-7" /></svg></span> Statistik
-      </a>
-      <a class="room-tab" href="room-master/room-waiting-requirements.php">
-        <span class="tab-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" /><path d="M12 7v5l3 2" /></svg></span> Menunggu Syarat
-      </a>
-    </nav>
+    <section class="feedback-answer-question card" aria-labelledby="feedback-question-title">
+      <div class="feedback-answer-label">Pertanyaan</div>
+      <h2 id="feedback-question-title">Bagaimana pendapatmu tentang pembelajaran yang berlangsung?</h2>
+      <div class="feedback-answer-count">14 jawaban</div>
+    </section>
 
-    <div class="feedback-grid">
+    <section class="feedback-responses" aria-labelledby="feedback-responses-title">
+      <h2 class="feedback-section-title" id="feedback-responses-title"><span class="feedback-title-mark" aria-hidden="true"></span>Jawaban Masuk</h2>
 
-      <div class="feedback-card">
-        <div class="feedback-head">
-          <div class="feedback-author">
-            <span class="author-avatar">&#128100;</span>
-            <div>
-              <p class="author-name">Anonymous</p>
-              <p class="author-time">Beberapa saat lalu</p>
-            </div>
-          </div>
-          <span class="status-dot">&#10003;</span>
-        </div>
-        <div class="feedback-body">Materinya sudah jelas dan mudah dipahami.</div>
-      </div>
-
-      <div class="feedback-card">
-        <div class="feedback-head">
-          <div class="feedback-author">
-            <span class="author-avatar">&#128100;</span>
-            <div>
-              <p class="author-name">Anonymous</p>
-              <p class="author-time">Beberapa saat lalu</p>
-            </div>
-          </div>
-          <span class="status-dot">&#10003;</span>
-        </div>
-        <div class="feedback-body">Waktu diskusi bisa ditambah, saya rasa masih banyak yang ingin bertanya.</div>
-      </div>
-
-      <div class="feedback-card">
-        <div class="feedback-head">
-          <div class="feedback-author">
-            <span class="author-avatar">&#128100;</span>
-            <div>
-              <p class="author-name">Anonymous</p>
-              <p class="author-time">Beberapa saat lalu</p>
-            </div>
-          </div>
-          <span class="status-dot">&#10003;</span>
-        </div>
-        <div class="feedback-body">Tambahkan lebih banyak contoh soal agar lebih mudah dimengerti.</div>
-      </div>
-
-      <div class="feedback-card">
-        <div class="feedback-head">
-          <div class="feedback-author">
-            <span class="author-avatar">&#128100;</span>
-            <div>
-              <p class="author-name">Anonymous</p>
-              <p class="author-time">Beberapa saat lalu</p>
-            </div>
-          </div>
-          <span class="status-dot">&#10003;</span>
-        </div>
-        <div class="feedback-body">Penjelasan sudah bagus, tapi slide presentasi bisa dibuat lebih menarik.</div>
-      </div>
-
-    </div>
-
+      <article class="feedback-response card">
+        <div class="feedback-response-number">Jawaban 1</div>
+        <p>Materinya sudah jelas dan mudah dipahami.</p>
+      </article>
+      <article class="feedback-response card">
+        <div class="feedback-response-number">Jawaban 2</div>
+        <p>Waktu diskusi bisa ditambah agar lebih banyak yang dapat bertanya.</p>
+      </article>
+      <article class="feedback-response card">
+        <div class="feedback-response-number">Jawaban 3</div>
+        <p>Tambahkan lebih banyak contoh soal agar lebih mudah dimengerti.</p>
+      </article>
+      <article class="feedback-response card">
+        <div class="feedback-response-number">Jawaban 4</div>
+        <p>Penjelasan sudah bagus dan membantu memahami materi.</p>
+      </article>
+    </section>
   </main>
 
 </body>

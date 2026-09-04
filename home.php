@@ -47,21 +47,21 @@ $initials = strtoupper(substr($username, 0, 2));
 				<section class="card history-card" aria-labelledby="history-title">
 					<h2 class="section-title" id="history-title">History Mengerjakan <a class="section-link" href="history.php">Lihat semua</a></h2>
 					<a class="list-item" href="answer-question.php">
-						<span class="status-icon" aria-hidden="true">&#10003;</span>
+						<span class="status-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" /></svg></span>
 						<div class="item-copy"><p class="item-title">Evaluasi Pembelajaran</p><p class="item-subtitle">Budi Santoso</p></div>
-						<span class="item-result">&#10003; Sudah Mengisi</span>
+						<span class="item-result"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6" /></svg>Sudah Mengisi</span>
 						<span class="room-card-link" aria-hidden="true">&#8250;</span>
 					</a>
 					<a class="list-item" href="answer-question.php">
-						<span class="status-icon" aria-hidden="true">&#10003;</span>
+						<span class="status-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" /></svg></span>
 						<div class="item-copy"><p class="item-title">Feedback Presentasi</p><p class="item-subtitle">Maya Putri</p></div>
-						<span class="item-result">&#10003; Sudah Mengisi</span>
+						<span class="item-result"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6" /></svg>Sudah Mengisi</span>
 						<span class="room-card-link" aria-hidden="true">&#8250;</span>
 					</a>
 					<a class="list-item" href="answer-question.php">
-						<span class="status-icon pending" aria-hidden="true">&#8635;</span>
+						<span class="status-icon pending" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" /><path d="M12 7v5l3 2" /></svg></span>
 						<div class="item-copy"><p class="item-title">Evaluasi Materi</p><p class="item-subtitle">Ahmad Fauzi</p></div>
-						<span class="item-result pending">Belum Selesai Mengisi</span>
+						<span class="item-result pending"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" /><path d="M12 7v5l3 2" /></svg>Belum Selesai Mengisi</span>
 						<span class="room-card-link" aria-hidden="true">&#8250;</span>
 					</a>
 				</section>

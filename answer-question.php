@@ -18,7 +18,7 @@
         <div class="title-main">Evaluasi Pembelajaran</div>
         <div class="title-sub">Dibuat oleh Budi Santoso &middot; 23 peserta</div>
       </div>
-      <div class="badge-anonim">&#128274; Feedback anonim</div>
+      <div class="badge-anonim"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2" /><path d="M8 10V7a4 4 0 0 1 8 0v3" /></svg>Feedback anonim</div>
     </div>
 
     <!-- Question 1 -->
@@ -40,7 +40,7 @@
     </div>
 
     <!-- Notice -->
-    <div class="notice">&#128274; Identitas Anda tidak akan diketahui oleh siapapun</div>
+    <div class="notice"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2" /><path d="M8 10V7a4 4 0 0 1 8 0v3" /></svg>Identitas Anda tidak akan diketahui oleh siapapun</div>
 
     <!-- Buttons -->
     <div class="button-row">
