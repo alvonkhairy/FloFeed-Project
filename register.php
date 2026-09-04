@@ -23,19 +23,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif ($password !== $passwordConfirmation) {
         $error = 'Konfirmasi password tidak cocok.';
     } else {
-        $checkStmt = mysqli_prepare($conn, 'SELECT user_id FROM users WHERE email = ? OR name = ? LIMIT 1');
-        mysqli_stmt_bind_param($checkStmt, 'ss', $email, $username);
-        mysqli_stmt_execute($checkStmt);
-        $existingUser = mysqli_stmt_get_result($checkStmt);
+		$checkStmt = $pdo->prepare('SELECT user_id FROM users WHERE email = :email OR name = :name LIMIT 1');
+		$checkStmt->execute([
+			'email' => $email,
+			'name' => $username,
+		]);
+		$existingUser = $checkStmt->fetch();
 
-        if (mysqli_num_rows($existingUser) > 0) {
+		if ($existingUser) {
             $error = 'Email atau username sudah terdaftar.';
         } else {
             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-            $insertStmt = mysqli_prepare($conn, 'INSERT INTO users (name, email, password) VALUES (?, ?, ?)');
-            mysqli_stmt_bind_param($insertStmt, 'sss', $username, $email, $hashedPassword);
+			$insertStmt = $pdo->prepare('INSERT INTO users (name, email, password) VALUES (:name, :email, :password)');
 
-            if (mysqli_stmt_execute($insertStmt)) {
+			if ($insertStmt->execute([
+				'name' => $username,
+				'email' => $email,
+				'password' => $hashedPassword,
+			])) {
                 $success = 'Pendaftaran berhasil. Silakan masuk.';
                 $_SESSION['flash_message'] = $success;
                 header('Location: login.php');
@@ -69,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 					</p>
 				<?php endif; ?>
 
-				<form action="daftar.php" method="post" aria-label="Form pendaftaran">
+				<form action="register.php" method="post" aria-label="Form pendaftaran">
 					<div class="input-row">
 						<label class="field-label" for="username">Username</label>
 						<input

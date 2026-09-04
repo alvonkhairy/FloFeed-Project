@@ -1,13 +1,18 @@
 <?php
 session_start();
+require_once __DIR__ . '/koneksi.php';
 
 if (!isset($_SESSION['user_id'])) {
     header('Location: login.php');
     exit;
 }
 
-$username = $_SESSION['username'] ?? 'User';
-$email = $_SESSION['email'] ?? 'user@example.com';
+$stmt = $pdo->prepare('SELECT name, email FROM users WHERE user_id = :user_id LIMIT 1');
+$stmt->execute(['user_id' => $_SESSION['user_id']]);
+$user = $stmt->fetch();
+
+$username = $user['name'] ?? 'User';
+$email = $user['email'] ?? 'user@example.com';
 $initials = strtoupper(substr($username, 0, 2));
 ?>
 <!doctype html>
@@ -23,7 +28,7 @@ $initials = strtoupper(substr($username, 0, 2));
 
 		<main class="home-page">
 			<section class="welcome" aria-labelledby="welcome-title">
-				<h1 id="welcome-title">Selamat Pagi, Azril &#128075;</h1>
+				<h1 id="welcome-title">Selamat Pagi Gaes, &#128075;</h1>
 				<p>Apa yang ingin anda lakukan hari ini?</p>
 			</section>
 
