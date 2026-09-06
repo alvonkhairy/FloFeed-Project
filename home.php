@@ -1,19 +1,22 @@
 <?php
-session_start();
-require_once __DIR__ . '/koneksi.php';
+session_start(); // jalankan session //
+require_once __DIR__ . '/koneksi.php'; // hubungkan file koneksi //
 
+
+// kalau belum login/tidak ada session, akan dilempar ke login //
 if (!isset($_SESSION['user_id'])) {
     header('Location: login.php');
     exit;
 }
 
+// ambil nama dan email user dari database, dicari berdasarkan user_id yang tersimpan di session //
 $stmt = $pdo->prepare('SELECT name, email FROM users WHERE user_id = :user_id LIMIT 1');
 $stmt->execute(['user_id' => $_SESSION['user_id']]);
 $user = $stmt->fetch();
 
+// Kalau $user kosong (datanya sudah terhapus dari database), pakai nilai default 'User' dan 'user@example.com' biar halaman tidak error.//
 $username = $user['name'] ?? 'User';
 $email = $user['email'] ?? 'user@example.com';
-$initials = strtoupper(substr($username, 0, 2));
 ?>
 <!doctype html>
 <html lang="id">
