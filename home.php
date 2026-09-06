@@ -31,7 +31,7 @@ $email = $user['email'] ?? 'user@example.com';
 
 		<main class="home-page">
 			<section class="welcome" aria-labelledby="welcome-title">
-				<h1 id="welcome-title">Selamat Pagi Gaes, &#128075;</h1>
+				<h1 id="welcome-title">Selamat Pagi, <?php echo htmlspecialchars($username, ENT_QUOTES, 'UTF-8'); ?> </h1> 
 				<p>Apa yang ingin anda lakukan hari ini?</p>
 			</section>
 
