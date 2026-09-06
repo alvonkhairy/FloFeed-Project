@@ -1,20 +1,28 @@
 <?php
-session_start();
-require_once __DIR__ . '/koneksi.php';
+session_start(); // jalankan session//
+require_once __DIR__ . '/koneksi.php'; // hubungkan  file koneksi //
 
+
+// digunakan agar user tidak perlu login ulang//
 if (isset($_SESSION['user_id'])) {
     header('Location: home.php');
     exit;
 }
 
+// menampilkan pesan "Email atau username sudah terdaftar." , dan bersifat sementara // 
 $error = '';
 $success = $_SESSION['flash_message'] ?? '';
 unset($_SESSION['flash_message']);
 
+
+// mengisi input nama/email dan password //
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $login = trim($_POST['email'] ?? '');
     $password = $_POST['password'] ?? '';
 
+
+// mengecek emaol/username dan password kosong atau tidak//
+// salah satu dari email atau  username digunakan untuk login //
     if ($login === '' || $password === '') {
         $error = 'Email/username dan password wajib diisi.';
     } else {
@@ -25,6 +33,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ]);
         $user = $stmt->fetch();
 
+// mengecek apakah email/username dan password sesuai dengan yang ada di database//
+// data user disimpan ke session //
         if ($user && password_verify($password, $user['password'])) {
             $_SESSION['user_id'] = (int) $user['user_id'];
             $_SESSION['username'] = $user['name'];
@@ -54,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           Masukkan akun Anda untuk mengakses room dan membuat pertanyaan.
         </p>
 
-        <?php if ($success !== ''): ?>
+        <?php if ($success !== ''): ?> 
           <p style="color: #067647; background: #ecfdf5; border: 1px solid #a7f3d0; padding: 10px 12px; border-radius: 8px; margin-bottom: 16px;">
             <?php echo htmlspecialchars($success, ENT_QUOTES, 'UTF-8'); ?>
           </p>

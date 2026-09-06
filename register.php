@@ -1,21 +1,25 @@
 <?php
-session_start();
-require_once __DIR__ . '/koneksi.php';
+session_start(); // jalankan session //
+require_once __DIR__ . '/koneksi.php'; // hubungkan file koneksi //
 
+// digunakan agar user tidak perlu register ulang//
 if (isset($_SESSION['user_id'])) {
     header('Location: home.php');
     exit;
 }
 
+// variabel //
 $error = '';
 $success = '';
 
+// mengisi input //
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = trim($_POST['username'] ?? '');
     $email = trim($_POST['email'] ?? '');
     $password = $_POST['password'] ?? '';
     $passwordConfirmation = $_POST['password-confirmation'] ?? '';
 
+// mengecek data yang diisi //
     if ($username === '' || $email === '' || $password === '' || $passwordConfirmation === '') {
         $error = 'Semua field wajib diisi.';
     } elseif (strlen($password) < 8) {
@@ -30,6 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		]);
 		$existingUser = $checkStmt->fetch();
 
+// mengecek apakah email atau username sudah terdaftar di database//
+// daftar berhasil, $succes akan muncul di login, "Pendaftaran berhasil. Silakan masuk."//
 		if ($existingUser) {
             $error = 'Email atau username sudah terdaftar.';
         } else {
