@@ -40,7 +40,10 @@ if ($roomId > 0) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $roomId = (int) ($_POST['room_id'] ?? 0);
     $title = trim($_POST['title'] ?? '');
-    $questions = array_values(array_filter(array_map('trim', $_POST['questions'] ?? [])));
+    $questions = array_values(array_map('trim', $_POST['questions'] ?? []));
+    if (count($questions) === 0) {
+        $questions[] = '';
+    }
     $action = isset($_POST['remove_index']) ? 'remove_question' : ($_POST['action'] ?? 'save'); // hapus pertanyaan //
 
 // tambah pertanyaan //
@@ -59,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 // buat judul room dan pertanyaan baru //
     if ($action !== 'save') {
         $error = '';
-    } elseif ($title === '' || count($questions) === 0) {
+    } elseif ($title === '' || in_array('', $questions, true)) {
         $error = 'Judul room dan minimal satu pertanyaan wajib diisi.';
     } elseif (strlen($title) > 150) {
         $error = 'Judul room maksimal 150 karakter.';
