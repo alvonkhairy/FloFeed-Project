@@ -68,14 +68,17 @@ foreach ($questions as $question) {
 
     <div class="feedback-summary stat-grid">
       <div class="card stat-card">
+        <span class="stat-icon icon-pink" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m6 12 4 4 8-8" /></svg></span>
         <div class="stat-number"><?php echo $participantCount; ?></div>
         <div class="stat-label">Jumlah Peserta</div>
       </div>
       <div class="card stat-card">
+        <span class="stat-icon icon-pink" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 6.5h14v10H9l-4 3v-13Z" /></svg></span>
         <div class="stat-number"><?php echo count($questions); ?></div>
         <div class="stat-label">Jumlah Feedback</div>
       </div>
       <div class="card stat-card">
+        <span class="stat-icon icon-pink" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 6h10M7 12h10M7 18h10" /></svg></span>
         <div class="stat-number"><?php echo $answerCount; ?></div>
         <div class="stat-label">Jumlah Jawaban</div>
       </div>

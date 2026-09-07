@@ -322,9 +322,12 @@ body.room-view .room-link {
 /* Shared controls and create/jawab layouts */
 .page:has(.question-card) { max-width: 800px; }
 .question-card, .page > .card { padding: 24px; margin-bottom: 20px; }
+.answer-page form > .card { padding: 24px; margin-bottom: 20px; }
 .field-label { display: block; margin-bottom: 10px; font-size: 14px; font-weight: 700; }
 .text-input, .answer-box { width: 100%; border: 1px solid #dfe3eb; border-radius: var(--radius-control); background: #fafbfe; color: var(--ink); outline: none; font-family: inherit; }
 .text-input { padding: 13px 16px; font-size: 14px; }
+.page #judul-room { margin-bottom: 24px; }
+#question-list { margin-top: 8px; }
 .answer-box { height: 70px; padding: 12px; resize: none; font-size: 14px; }
 .text-input:focus, .answer-box:focus { border-color: var(--purple); background: #fff; box-shadow: 0 0 0 3px #ec008c24; }
 .text-input + .text-input { margin-top: 12px; }
@@ -463,7 +466,8 @@ body.room-view .room-link {
 .history-list-card .section-title { margin-bottom: 10px; }
 .history-list-card .list-item { min-height: 62px; }
 .rooms-page { max-width: 1040px; }
-.rooms-list-card { padding: 24px; }
+.rooms-list-card { display: flex; flex-direction: column; padding: 24px; }
+.rooms-list-card:has(.empty-state) { min-height: 240px; }
 .rooms-list-card .section-title { margin-bottom: 10px; }
 .rooms-list-card .list-item { min-height: 68px; }
 .welcome { margin-bottom: 26px; }
@@ -475,7 +479,8 @@ body.room-view .room-link {
 }
 .join-card, .history-card, .rooms-list-card { padding: 24px; }
 .join-card { min-height: 170px; }
-.history-card { min-height: 240px; }
+.history-card { display: flex; flex-direction: column; min-height: 240px; }
+.empty-state { display: grid; flex: 1; place-items: center; margin: 0; color: var(--muted); text-align: center; }
 .card-heading, .section-title { display: flex; align-items: center; justify-content: space-between; margin: 0 0 12px; font-size: 22px; font-weight: 800; }
 .card-heading { justify-content: flex-start; gap: 8px; }
 .card-heading .symbol, .section-link { color: var(--purple); }
@@ -495,6 +500,10 @@ body.room-view .room-link {
 .list-item:last-child { border-bottom: 0; }
 .list-item { color: inherit; text-decoration: none; }
 .list-item:hover { background: #fcf4fa; }
+.rooms-list-card .list-item > .btn,
+.rooms-list-card .list-item > form { flex: 0 0 70px; width: 70px; }
+.rooms-list-card .list-item > form { margin: 0; }
+.rooms-list-card .list-item > form .btn { width: 100%; }
 .status-icon, .room-icon { display: grid; place-items: center; flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: var(--green-soft); color: var(--green); font-size: 13px; font-weight: 800; }
 .status-icon svg, .item-result svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
 .status-icon.pending { background: #fff8e8; color: var(--amber); }
@@ -502,6 +511,7 @@ body.room-view .room-link {
 .item-copy { min-width: 0; flex: 1; }
 .item-title, .item-subtitle { margin: 0; }
 .item-title { font-size: 16px; font-weight: 700; }
+.rooms-list-card .item-title a { color: #111827; text-decoration: none; }
 .item-subtitle { margin-top: 2px; color: #9aa4bb; font-size: 12px; }
 .item-result { display: inline-flex; align-items: center; gap: 4px; color: var(--green); font-size: 12px; font-weight: 700; white-space: nowrap; }
 .item-result.pending { color: var(--amber); }

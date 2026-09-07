@@ -88,7 +88,7 @@ $historyRooms = $historyStmt->fetchAll();
 					<?php endforeach; ?>
 
 					<?php if (count($historyRooms) === 0): ?>
-						<p>Belum ada room yang kamu kerjakan.</p>
+						<p class="empty-state">Belum ada room yang kamu kerjakan, masukkan kode room untuk mengerjakan soal.</p>
 					<?php endif; ?>
 				</section>
 			</div>

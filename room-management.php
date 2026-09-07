@@ -69,7 +69,7 @@ $rooms = $roomStmt->fetchAll();
 					</div>
 				<?php endforeach; ?>
 				<?php if (count($rooms) === 0): ?>
-					<p>Belum ada room.</p>
+					<p class="empty-state">Belum ada room, buat room untuk membuat soal yang akan dikerjakan oleh peserta.</p>
 				<?php endif; ?>
 			</section>
 		</main>

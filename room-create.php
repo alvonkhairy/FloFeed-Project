@@ -162,7 +162,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <form method="post">
                 <input type="hidden" name="room_id" value="<?php echo $roomId; ?>">
                 <label class="field-label" for="judul-room">Judul Room</label>
-                <input class="text-input" id="judul-room" name="title" type="text" value="<?php echo htmlspecialchars($title, ENT_QUOTES, 'UTF-8'); ?>" required>
+                <input class="text-input" id="judul-room" name="title" type="text" value="<?php echo htmlspecialchars($title, ENT_QUOTES, 'UTF-8'); ?>" placeholder="Masukkan judul room..." required>
                 <div id="question-list">
                     <?php if (count($questions) === 0): ?>
                         <?php $questions = ['']; ?>
