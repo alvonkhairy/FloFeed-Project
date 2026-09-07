@@ -358,7 +358,8 @@ body.room-view .room-link {
 .thank-you-card h1 { margin: 0; font-size: 24px; }
 .thank-you-card p { margin: 10px 0 28px; color: var(--muted); font-size: 14px; }
 .thank-you-card .btn { width: 100%; }
-.add-question-btn { width: 100%; margin-bottom: 28px; padding: 16px; border: 1.5px dashed #cfd5e2; border-radius: var(--radius-control); background: transparent; color: #65708a; cursor: pointer; font-weight: 600; }
+.add-question-btn { width: 100%; margin-bottom: 28px; padding: 16px; border: 1.5px dashed #cfd5e2; border-radius: var(--radius-control); background: transparent; color: #65708a; cursor: pointer; font-weight: 600; transition: all 0.2s ease; }
+.add-question-btn:hover { border-color: var(--purple); background: var(--purple-soft); color: var(--purple); transform: translateY(-1px); }
 
 /* Waiting state */
 .waiting-card { max-width: 650px; margin: 0 auto; padding: 40px; }
