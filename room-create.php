@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $error = 'Judul room maksimal 150 karakter.';
     } else {
 
-//  pengecekan ulang proses simpan _POST //
+//  pengecekan ulang untuk memastikan room dimiliki oleh user yang sedang login //
         try {
             if ($roomId > 0) {
                 $ownerStmt = $pdo->prepare('SELECT id FROM rooms WHERE id = :id AND user_id = :user_id');
@@ -105,7 +105,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $codeStmt->execute(['room_code' => $roomCode]);
                 } while ($codeStmt->fetch());
 
-// Insert room baru, lalu ambil id-nya yang baru dibuat //
+// nambahkan data ke room //
                 $roomStmt = $pdo->prepare('INSERT INTO rooms (user_id, title, room_code) VALUES (:user_id, :title, :room_code)');
                 $roomStmt->execute([
                     'user_id' => $_SESSION['user_id'],
@@ -115,7 +115,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $roomId = $pdo->lastInsertId();
             }
 
-// pertanyaan baru disimpan ke database, dengan order_index sesuai urutan input //
+// menyimpan pertanyaan ke tabel questions //
             $questionStmt = $pdo->prepare('INSERT INTO questions (room_id, question_text, order_index) VALUES (:room_id, :question_text, :order_index)');
             foreach ($questions as $index => $question) {
                 $questionStmt->execute([

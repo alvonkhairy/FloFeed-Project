@@ -17,6 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_id'])) {
 	]);
 }
 
+// mengambil semua room milik user //
 $roomStmt = $pdo->prepare(
 	'SELECT rooms.id, rooms.title, rooms.room_code, rooms.created_at,
 			COUNT(DISTINCT room_participants.id) AS participant_count,
